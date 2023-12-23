@@ -1,0 +1,4 @@
+name: PaperEdu
+version: '${version}'
+main: org.blog.paperedu.PaperEdu
+api-version: '1.20'
