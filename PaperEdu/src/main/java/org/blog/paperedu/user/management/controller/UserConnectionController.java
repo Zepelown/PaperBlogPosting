@@ -24,13 +24,13 @@ public class UserConnectionController implements Listener {
 
     @EventHandler
     public void onUserKickFromServer(PlayerKickEvent event) {
-        userManager.removeUser(event.getPlayer());
+        userManager.removeUser(event.getPlayer().getUniqueId());
         PaperEdu.getServerInstance().getLogger().info("플레이어 데이터 삭제");
     }
 
     @EventHandler
     public void onUserQuitFromServer(PlayerQuitEvent event) {
-        userManager.removeUser(event.getPlayer());
+        userManager.removeUser(event.getPlayer().getPlayerProfile().getId());
         PaperEdu.getServerInstance().getLogger().info("플레이어 데이터 삭제");
     }
 }
