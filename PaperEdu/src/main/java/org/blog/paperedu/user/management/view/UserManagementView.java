@@ -1,6 +1,6 @@
 package org.blog.paperedu.user.management.view;
 
-import org.blog.paperedu.user.management.entity.User;
+import org.blog.paperedu.user.management.domain.model.User;
 import org.bukkit.entity.Player;
 
 public class UserManagementView {

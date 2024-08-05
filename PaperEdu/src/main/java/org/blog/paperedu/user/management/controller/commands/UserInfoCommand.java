@@ -1,7 +1,7 @@
 package org.blog.paperedu.user.management.controller.commands;
 
-import org.blog.paperedu.user.management.entity.User;
-import org.blog.paperedu.user.management.service.UserManager;
+import org.blog.paperedu.user.management.domain.model.User;
+import org.blog.paperedu.user.management.domain.service.UserManager;
 import org.blog.paperedu.user.management.view.UserManagementView;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -24,7 +24,6 @@ public class UserInfoCommand implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label,
                              @NotNull String[] args) {
         User playerData;
-
         if (args.length == 1) {
             playerData = userManager.getUserData(args[0]);
             if (playerData == null) {
@@ -42,7 +41,7 @@ public class UserInfoCommand implements CommandExecutor {
 
         userManagementView.sendUserInfo((Player) sender, playerData);
 
-        playerData.setMoney(playerData.getMoney() + 10L);
+        playerData.setMoney(playerData.getMoney() + 10);
 
         return true;
     }
