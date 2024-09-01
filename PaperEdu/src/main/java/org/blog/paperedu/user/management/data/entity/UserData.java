@@ -1,9 +1,7 @@
 package org.blog.paperedu.user.management.data.entity;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.Value;
 import org.bukkit.configuration.serialization.ConfigurationSerializable;
 import org.bukkit.configuration.serialization.SerializableAs;
 import org.jetbrains.annotations.NotNull;

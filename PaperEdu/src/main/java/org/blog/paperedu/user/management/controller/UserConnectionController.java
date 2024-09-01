@@ -24,6 +24,7 @@ public class UserConnectionController implements Listener {
             return;
         }
         userManager.addUser(player);
+        player.getPlayerTime();
     }
 
     @EventHandler
