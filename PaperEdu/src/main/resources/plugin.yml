@@ -5,3 +5,7 @@ api-version: '1.20'
 commands:
   uinfo:
    description: display player data
+  getGun:
+    description: get custom gun
+  getBullet:
+    description: get custom gun bullet
