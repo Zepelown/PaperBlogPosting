@@ -21,7 +21,11 @@ public final class PaperEdu extends JavaPlugin {
     public void onEnable() {
         getLogger().info("플러그인 시작 테스트");
         serverInstance = this;
+
+
         userManagement = new UserManagementController();
+
+
         serverManagement = new ServerManagementController();
         gunController = new GunController();
     }

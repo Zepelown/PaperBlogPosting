@@ -20,6 +20,17 @@ public class GunBuilder {
         return stack;
     }
 
+    public static ItemStack buildGun(Material type, int amount, String displayName, String customItemTag,int customModelData, String... lore) {
+        ItemStack stack = new ItemStack(type, amount);
+        ItemMeta meta = stack.getItemMeta();
+        meta.getPersistentDataContainer().set(Gun.TAG_KEY, PersistentDataType.STRING, customItemTag);
+        meta.setCustomModelData(customModelData);
+        meta.setDisplayName(displayName);
+        meta.setLore(Arrays.asList(lore));
+        stack.setItemMeta(meta);
+        return stack;
+    }
+
     public static ItemStack buildBullet(Material type, int amount, String displayName, double damage, String... lore) {
         ItemStack stack = new ItemStack(type, amount);
         ItemMeta meta = stack.getItemMeta();

@@ -13,8 +13,10 @@ public class NormalPistol implements Gun {
     public static final int MAX_AMMO = 7;
     public static final int RELOAD_TIME = 2;
     public static final double DAMAGE = 10.0;
+    private static final int customModelData = 1;
     private final Bullet normalPistolBullet;
     private int currentAmmo;
+
     public NormalPistol(int currentAmmo) {
         this.currentAmmo = currentAmmo;
 
@@ -49,6 +51,7 @@ public class NormalPistol implements Gun {
                 1,
                 "딱총",
                 GUN_TAG,
+                customModelData,
                 "평범한 딱총이다"
         );
         itemStack.getItemMeta().getPersistentDataContainer().set(CURRENT_AMMO_TAG_KEY, PersistentDataType.INTEGER, MAX_AMMO);
