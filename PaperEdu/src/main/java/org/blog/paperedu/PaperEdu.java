@@ -1,5 +1,6 @@
 package org.blog.paperedu;
 
+import org.blog.paperedu.mob.controller.MobController;
 import org.blog.paperedu.server.management.controller.ServerManagementController;
 import org.blog.paperedu.user.management.controller.UserManagementController;
 import org.blog.paperedu.user.management.data.entity.UserData;
@@ -17,17 +18,15 @@ public final class PaperEdu extends JavaPlugin {
     private static UserManagementController userManagement;
     private static ServerManagementController serverManagement;
     private static GunController gunController;
+    private static MobController mobController;
     @Override
     public void onEnable() {
         getLogger().info("플러그인 시작 테스트");
         serverInstance = this;
-
-
         userManagement = new UserManagementController();
-
-
         serverManagement = new ServerManagementController();
         gunController = new GunController();
+        mobController = new MobController();
     }
 
     @Override

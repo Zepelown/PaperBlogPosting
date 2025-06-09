@@ -9,3 +9,5 @@ commands:
     description: get custom gun
   getBullet:
     description: get custom gun bullet
+  bigEyeZombie:
+    description: spawn BigEyeZombie
